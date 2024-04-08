@@ -1,0 +1,12 @@
+{
+  "name": "uk.co.unitydevelopers.udvp",
+  "version": "0.0.1",
+  "displayName": "UD Versioning Package",
+  "description": "Unity Developers Versioning Package",
+  "unity": "2021.3",
+  "author": {
+    "name": "Unity Developers",
+    "email": "hello@unitydevelopers.co.uk",
+    "url": "https://www.unitydevelopers.co.uk/"
+  }
+}

@@ -1,9 +1,9 @@
-using UnityEngine;
+using UnityEditor;
 
-namespace Editor.UDVP {
+namespace Editor.UDV {
     public class PlatformIdentifier : IBuildIdentifier {
         public string GetIdentifier() {
-            return Application.platform.ToString();
+            return EditorUserBuildSettings.activeBuildTarget.ToString();
         }
     }
 }

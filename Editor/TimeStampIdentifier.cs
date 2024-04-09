@@ -1,14 +1,14 @@
 using System;
 
-namespace Editor.UDV {
+namespace UDV {
     public class TimeStampIdentifier : IBuildIdentifier {
         private string Identifier;
         public TimeStampIdentifier() {
-            Identifier = DateTime.Now.ToString("yMMddHHmm");
+            Identifier = DateTime.Now.ToString("yyMMddHHmm");
         }
 
         public string GetIdentifier() {
-            return Identifier;
+            return Identifier.Substring(1);
         }
     }
 }

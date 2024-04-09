@@ -1,6 +1,6 @@
 using UnityEditor;
 
-namespace Editor.UDV {
+namespace UDV {
     public class SemanticIdentifier : IBuildIdentifier {
        
         public string GetIdentifier() {

@@ -38,7 +38,7 @@ namespace UDV {
 
         private void WriteFile(string build) {
             Debug.Log($"BuildInfo is {build}");
-            File.WriteAllText($"{Application.dataPath}/Resources/build.txt", build);
+            File.WriteAllText($"{Application.streamingAssetsPath}/build.txt", build);
         }
     }
 }

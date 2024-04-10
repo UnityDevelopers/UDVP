@@ -4,7 +4,7 @@ namespace UDV {
     public class TimeStampIdentifier : IBuildIdentifier {
         private string Identifier;
         public TimeStampIdentifier() {
-            Identifier = DateTime.Now.ToString("yyMMddHHmm");
+            Identifier = DateTime.UtcNow.ToString("yyMMddHHmm");
         }
 
         public string GetIdentifier() {

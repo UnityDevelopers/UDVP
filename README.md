@@ -59,4 +59,4 @@ To set the build string as the label for a cloud build:
 2. Scroll to the "Script-hooks" section and set the field "Post-build script" to ```Packages/UDVP/post-build.sh```
 
 ## Samples
-You can find sample scripts on the ```Samples```directory of the package.
+You can find sample scripts on the ```Samples``` directory of the package.

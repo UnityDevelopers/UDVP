@@ -31,7 +31,7 @@ namespace UDV {
                 parts.Add(identifier.GetIdentifier());
             }
 
-            string build = string.Join("-", parts.ToArray());
+            string build = string.Join("-", parts.ToArray()).ToLower();
 
             WriteFile(build);
         }

@@ -12,26 +12,23 @@ namespace UDV {
         public int callbackOrder => int.MaxValue;
 
         public void OnPreprocessBuild(BuildReport report) {
-            var timeStampIdentifier = new TimeStampIdentifier();
+            var semanticIdentifier = new SemanticIdentifier().GetIdentifier();
+            var timeStampIdentifier = new TimeStampIdentifier().GetIdentifier();
 
             List<IBuildIdentifier> identifiers = new List<IBuildIdentifier>();
 
-            identifiers.Add(new SemanticIdentifier());
-            identifiers.Add(timeStampIdentifier);
             identifiers.Add(new PlatformIdentifier());
             identifiers.AddRange(UDVIdentifiers.Instance.Identifiers);
 
             if (EditorUserBuildSettings.activeBuildTarget == BuildTarget.Android) {
-                PlayerSettings.Android.bundleVersionCode = int.Parse(timeStampIdentifier.GetIdentifier());
+                PlayerSettings.Android.bundleVersionCode = int.Parse(timeStampIdentifier);
             }
 
-            List<string> parts = new List<string>();
+            string build = $"{semanticIdentifier}.{timeStampIdentifier}";
 
             foreach (var identifier in identifiers) {
-                parts.Add(identifier.GetIdentifier());
+                build+=$"-{identifier.GetIdentifier().ToLower()}";
             }
-
-            string build = string.Join("-", parts.ToArray()).ToLower();
 
             WriteFile(build);
         }

@@ -5,7 +5,7 @@ using System.IO;
 using UnityEngine;
 using UnityEngine.Networking;
 
-namespace UDV {
+namespace UDVP {
     public class BuildString : MonoBehaviour {
         public void Load(Action<string> callback) {
             StartCoroutine(LoadBuildString("build.txt", callback));

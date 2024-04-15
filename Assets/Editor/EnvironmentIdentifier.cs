@@ -1,4 +1,4 @@
-using UDV;
+using UDVP;
 using UnityEditor.Build;
 using UnityEditor.Build.Reporting;
 
@@ -11,6 +11,6 @@ public class EnvironmentIdentifier : IBuildIdentifier, IPreprocessBuildWithRepor
     }
 
     public void OnPreprocessBuild(BuildReport report) {
-        UDVIdentifiers.Instance.Add(this);
+        Identifiers.Instance.Add(this);
     }
 }

@@ -1,6 +1,6 @@
 using UnityEditor;
 
-namespace UDV {
+namespace UDVP {
     public class PlatformIdentifier : IBuildIdentifier {
         public string GetIdentifier() {
             return EditorUserBuildSettings.activeBuildTarget.ToString();

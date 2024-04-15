@@ -7,8 +7,8 @@ using UnityEditor.Build;
 using UnityEditor.Build.Reporting;
 using UnityEngine;
 
-namespace UDV {
-    public class UDVersioning : IPreprocessBuildWithReport {
+namespace UDVP {
+    public class Versioning : IPreprocessBuildWithReport {
         public int callbackOrder => int.MaxValue;
 
         public void OnPreprocessBuild(BuildReport report) {
@@ -18,7 +18,7 @@ namespace UDV {
             List<IBuildIdentifier> identifiers = new List<IBuildIdentifier>();
 
             identifiers.Add(new PlatformIdentifier());
-            identifiers.AddRange(UDVIdentifiers.Instance.Identifiers);
+            identifiers.AddRange(Identifiers.Instance.CustomIdentifiers);
 
             if (EditorUserBuildSettings.activeBuildTarget == BuildTarget.Android) {
                 PlayerSettings.Android.bundleVersionCode = int.Parse(timeStampIdentifier);

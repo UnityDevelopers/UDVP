@@ -61,7 +61,7 @@
       }
     },
     "uk.co.unitydevelopers.udvp": {
-      "version": "file:UDVP",
+      "version": "file:uk.co.unitydevelopers.udvp",
       "depth": 0,
       "source": "embedded",
       "dependencies": {}

@@ -1,8 +1,8 @@
 {
   "name": "uk.co.unitydevelopers.udvp",
   "version": "0.0.2",
-  "displayName": "UD Versioning",
-  "description": "Unity Developers Versioning",
+  "displayName": "UDVP",
+  "description": "Unity Developers Versioning Package",
   "unity": "2021.3",
   "author": {
     "name": "Unity Developers",

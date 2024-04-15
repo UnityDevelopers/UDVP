@@ -27,7 +27,7 @@ namespace UDV {
             string build = $"{semanticIdentifier}.{timeStampIdentifier}";
 
             foreach (var identifier in identifiers) {
-                build+=$"-{identifier.GetIdentifier().ToLower()}";
+                build += $"-{identifier.GetIdentifier().ToLower()}";
             }
 
             WriteFile(build);

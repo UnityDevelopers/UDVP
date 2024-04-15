@@ -6,15 +6,15 @@ Design and purpose is explained on [UDVP](https://reltimetech.atlassian.net/wiki
 ## Package integration
 To integrate it into a project please follow these steps:
 
-1. Go to the [github repo](https://github.com/UnityDevelopers/UDVP) and download the code from the main branch in zip format.
-2. Extract the contents of the zip file, it will create a directory named UDVP-main.
-3. Rename the directory to just UDVP.
-4. Copy the directory to the Packages directory of your Unity project.
+1. Go to the Package Manager window on your Unity Project.
+2. Click on the ```+``` button and select "Add package from git URL" 
+3. Paste the following URL in the field: ```git@github.com:UnityDevelopers/UDVP.git?path=/Packages/uk.co.unitydevelopers.udvp```
+4. Click the "Add" button
 
-Unity should detect UDVP as an embedded package.
+This should add the UDVP package to your project.
 
 ## Package use
-By default identifiers for app version, timestamp and platform are added to the build string. You can add new identifiers as follows.
+Identifiers for app version, timestamp and platform are added by default to the build string. You can add new identifiers as follows.
 
 ### Add a new identifier
 1. Create a class inside ```Assets/Editor``` folder of your project.
@@ -29,7 +29,7 @@ By default identifiers for app version, timestamp and platform are added to the 
 public void OnPreprocessBuild(BuildReport report) {
        //... some setup if needed
 
-        UDVIdentifiers.Instance.Add(this);
+        Identifiers.Instance.Add(this);
 }
 ```
 6. The ```callbackOrder``` property is used for the relative order of the identifiers.
@@ -55,8 +55,9 @@ private void Start() {
 
 ## Cloud build
 To set the build string as the label for a cloud build:
-1. Go to the "Advanced Settings" tab of your Build Configuration.
-2. Scroll to the "Script-hooks" section and set the field "Post-build script" to ```Packages/UDVP/post-build.sh```
+1. Copy the file ```post-build.sh``` from the package contents to the root of your project
+1. Go to the "Advanced Settings" tab of your Build Configuration on Web Dashboard.
+2. Scroll to the "Script-hooks" section and set the field "Post-build script" to ```post-build.sh```
 
 ## Samples
 You can find sample scripts on the ```Samples``` directory of the package.

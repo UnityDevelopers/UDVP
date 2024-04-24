@@ -8,7 +8,7 @@ To integrate it into a project please follow these steps:
 
 1. Go to the Package Manager window on your Unity Project.
 2. Click on the ```+``` button and select "Add package from git URL" 
-3. Paste the following URL in the field: ```git@github.com:UnityDevelopers/UDVP.git?path=/Packages/uk.co.unitydevelopers.udvp```
+3. Paste the following URL in the field: ```https://github.com/UnityDevelopers/UDVP.git?path=/Packages/uk.co.unitydevelopers.udvp```
 4. Click the "Add" button
 
 This should add the UDVP package to your project.

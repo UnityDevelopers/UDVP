@@ -17,7 +17,6 @@ namespace UDVP {
 
             List<IBuildIdentifier> identifiers = new List<IBuildIdentifier>();
 
-            identifiers.Add(new PlatformIdentifier());
             identifiers.AddRange(Identifiers.Instance.CustomIdentifiers);
 
             if (EditorUserBuildSettings.activeBuildTarget == BuildTarget.Android) {
